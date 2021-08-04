@@ -62,7 +62,8 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-3">취득하고픈 <b class="mb-0">자격증</b>을 검색하세요</h1>
+                            <h1 class="mb-2">취득하고픈 <b class="mb-0">자격증</b>을</h1>
+                            <h1 class="mb-4">검색하세요</h1>
                             <h4 class="mb-5">강의는 우리가 찾아드릴게요</h4>
 
                             <!-- Signup form-->
@@ -73,15 +74,15 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <form class="form-subscribe" id="contactForm"></form>
                                 <!-- Email address input-->
                                 <div class="row">
                                     <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                        <input class="form-control form-control-lg" id="emailAddress" type="text" placeholder="자격증을 검색하세요">
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
                                         <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                     </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">검색</button></div>
                                 </div>
                                 <!-- Submit success message-->
                                 <!---->
@@ -276,3 +277,4 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
+    

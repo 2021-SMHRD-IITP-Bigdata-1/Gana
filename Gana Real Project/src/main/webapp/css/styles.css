@@ -327,7 +327,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: 'GmarketSansMedium';
   font-size: inherit;
   line-height: inherit;
 }
@@ -1622,7 +1622,7 @@ progress {
 
   .col-xl-6 {
     flex: 0 0 auto;
-    width: 55%;
+    width: 62%;
   }
 
   .col-xl-7 {
@@ -2972,11 +2972,13 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
+  font-family: 'GmarketSansMedium', serif;
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
 .btn-primary:hover {
+  font-family: 'GmarketSansMedium', serif;
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
@@ -10888,7 +10890,7 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  /*background: url("../assets/img/bg-masthead.jpg") no-repeat center center;*/
+  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -10901,15 +10903,15 @@ header.masthead:before {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
 }
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-top: 15rem;
+    padding-bottom: 18rem;
   }
   header.masthead h1, header.masthead .h1 {
     font-size: 3rem;
