@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="UTF-8">
     
     <head>
         <meta charset="UTF-8" />
@@ -28,7 +26,7 @@
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="#page-top">Gana Project</a>
+                <a class="navbar-brand fw-bold" href="index.html">Gana Project</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: whitesmoke;">
                     Menu
                     <i class="bi-list"></i>
@@ -41,7 +39,7 @@
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                          
-                        <span class="d-flex align-items-center ">
+                        <span class="d-flex align-items-center" onClick="location.href='login.html'">
                             <i class="bi bi-box-arrow-in-right me-2"></i>
                             <span class="small">로그인</span>
                         </span>
@@ -75,14 +73,14 @@
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm"></form>
-                                <!-- Email address input-->
+                                
                                 <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="text" placeholder="자격증을 검색하세요">
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                    <div class="col me-2">
+                                        <input class="form-control form-control-lg " id="emailAddress" type="text" placeholder="자격증을 검색하세요">
+                                        <!--  <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div> -->
                                     </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">검색</button></div>
+                                    <div class="col-auto "><button class="btn btn-primary btn-lg" id="submitButton" type="submit">검색</button></div>
                                 </div>
                                 <!-- Submit success message-->
                                 <!---->
