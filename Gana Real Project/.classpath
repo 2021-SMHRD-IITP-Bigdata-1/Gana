@@ -13,5 +13,8 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/smhrd/Desktop/gson-2.8.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/smhrd/Desktop/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

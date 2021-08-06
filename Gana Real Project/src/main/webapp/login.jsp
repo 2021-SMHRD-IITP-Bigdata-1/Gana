@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="UTF-8">
     
@@ -65,11 +67,14 @@
                                             <div class="text-center mt-4 mb-5">
                                                 <h3>로그인</h3>
                                             </div>
-                                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                            
+                                            
+                                            <!-- login form 시작 -->
+                                            <form action="loginController" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                                 <!-- id input-->
                                                     <div class="row mb-4">
                                                         <div class="col">
-                                                            <input class="form-control form-control-lg" id="emailAddress" type="text" placeholder="아이디" data-sb-validations="required,email" />
+                                                            <input class="form-control form-control-lg" id="emailAddress" type="text" placeholder="아이디" name="id"/>
                                                        </div>
                                                         
                                                     </div>
@@ -77,7 +82,7 @@
                                                  <!-- password input-->
                                                  <div class="row mb-4 ">
                                                     <div class="col ">
-                                                        <input class="form-control form-control-lg" id="emailAddress" type="password" placeholder="비밀번호" data-sb-validations="required,email" />
+                                                        <input class="form-control form-control-lg" id="emailAddress" type="password" placeholder="비밀번호" name="password" />
                                                      
                                                     </div>
                                                    
