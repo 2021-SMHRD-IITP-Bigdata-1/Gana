@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -28,7 +28,7 @@
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="index.html">Gana Project</a>
+                <a class="navbar-brand fw-bold" href="index.jsp">Gana Project</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: whitesmoke;">
                     Menu
                     <i class="bi-list"></i>
@@ -41,13 +41,13 @@
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                          
-                        <span class="d-flex align-items-center" onClick="location.href='login.html'">
+                        <span class="d-flex align-items-center" onClick="location.href='login.jsp'">
                             <i class="bi bi-box-arrow-in-right me-2"></i>
                             <span class="small">로그인</span>
                         </span>
                     </button>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                        <span class="d-flex align-items-center">
+                        <span class="d-flex align-items-center" onClick="location.href='join.jsp'">
                             <i class="bi bi-door-open me-2"></i>
                             <span class="small">회원가입</span>
                         </span>

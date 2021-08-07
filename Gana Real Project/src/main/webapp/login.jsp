@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="UTF-8">
@@ -28,7 +28,7 @@
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="index.html">Gana Project</a>
+                <a class="navbar-brand fw-bold" href="index.jsp">Gana Project</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: whitesmoke;">
                     Menu
                     <i class="bi-list"></i>
@@ -41,13 +41,13 @@
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                          
-                        <span class="d-flex align-items-center ">
+                        <span class="d-flex align-items-center" onClick="location.href='login.jsp'">
                             <i class="bi bi-box-arrow-in-right me-2"></i>
                             <span class="small">로그인</span>
                         </span>
                     </button>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                        <span class="d-flex align-items-center">
+                        <span class="d-flex align-items-center" onClick="location.href='join.jsp'">
                             <i class="bi bi-door-open me-2"></i>
                             <span class="small">회원가입</span>
                         </span>
@@ -70,11 +70,12 @@
                                             
                                             
                                             <!-- login form 시작 -->
-                                            <form action="loginController" class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                            <form action="loginController" class="form-subscribe" id="contactForm" method="post">
                                                 <!-- id input-->
                                                     <div class="row mb-4">
                                                         <div class="col">
-                                                            <input class="form-control form-control-lg" id="emailAddress" type="text" placeholder="아이디" name="id"/>
+                                                        	
+                                                            <input class="form-control form-control-lg" id="input_id" type="text" placeholder="아이디" name="id" onkeydown="" />
                                                        </div>
                                                         
                                                     </div>
@@ -82,7 +83,8 @@
                                                  <!-- password input-->
                                                  <div class="row mb-4 ">
                                                     <div class="col ">
-                                                        <input class="form-control form-control-lg" id="emailAddress" type="password" placeholder="비밀번호" name="password" />
+                                                    	
+                                                        <input class="form-control form-control-lg" id="input_pw" type="password" placeholder="비밀번호" name="password" />
                                                      
                                                     </div>
                                                    
@@ -116,8 +118,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        

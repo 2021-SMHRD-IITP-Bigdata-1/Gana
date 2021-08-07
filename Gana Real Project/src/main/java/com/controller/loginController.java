@@ -51,6 +51,9 @@ public class loginController extends HttpServlet {
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			
+			System.out.println(id);
+			System.out.println(pw);
+			
 			rs = psmt.executeQuery();
 			
 			//아이디가 겹치지 않을 경우

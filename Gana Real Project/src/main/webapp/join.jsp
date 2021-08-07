@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="UTF-8">
     
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
@@ -28,7 +28,7 @@
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="index.html">Gana Project</a>
+                <a class="navbar-brand fw-bold" href="index.jsp">Gana Project</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: whitesmoke;">
                     Menu
                     <i class="bi-list"></i>
@@ -41,13 +41,13 @@
                     </ul>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                          
-                        <span class="d-flex align-items-center ">
+                        <span class="d-flex align-items-center " onClick="location.href='login.jsp'">
                             <i class="bi bi-box-arrow-in-right me-2"></i>
                             <span class="small">로그인</span>
                         </span>
                     </button>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                        <span class="d-flex align-items-center">
+                        <span class="d-flex align-items-center" onClick="location.href='join.jsp'">
                             <i class="bi bi-door-open me-2"></i>
                             <span class="small">회원가입</span>
                         </span>
@@ -67,14 +67,17 @@
                                             <div class="text-center mt-4 mb-5">
                                                 <h3>회원가입</h3>
                                             </div>
-                                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                            <form action="joinController" method="post" class="form-subscribe" id="contactForm">
                                                 <!-- id input-->
                                                     <div>
                                                         <h5 class="joininfo ms-2">아이디</h5>
                                                     </div>
                                                     <div class="row mb-4">
                                                         <div class="col">
-                                                            <input class="form-control form-control-lg" id="emailAddress" type="text" data-sb-validations="required,email" />
+                                                            <input class="form-control form-control-lg" id="input_id" type="text" name="id" onkeydown="idCheck()"/>
+                                                            <span id="sp"></span>
+                                                            
+                                                            
                                                        </div>
                                                         
                                                     </div>
@@ -85,7 +88,7 @@
                                                 </div>
                                                  <div class="row mb-4 ">
                                                     <div class="col ">
-                                                        <input class="form-control form-control-lg" id="emailAddress" type="password" data-sb-validations="required,email" />
+                                                        <input class="form-control form-control-lg" id="emailAddress" type="password" name="pw"/>
                                                      
                                                     </div>
                                                    
@@ -97,7 +100,7 @@
                                                 </div>
                                                  <div class="row mb-4 ">
                                                     <div class="col ">
-                                                        <input class="form-control form-control-lg" id="emailAddress" type="password" data-sb-validations="required,email" />
+                                                        <input class="form-control form-control-lg" id="emailAddress" type="password"/>
                                                      
                                                     </div>
                                                    
@@ -305,3 +308,11 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        
+        <script>
+        
+       
+        
+        </script>
