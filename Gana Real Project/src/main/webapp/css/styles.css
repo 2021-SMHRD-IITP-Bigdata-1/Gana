@@ -11121,3 +11121,12 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.id_ok{color:blue; display: none;}
+.id_already{color:red; display: none;}
+
+.pw_ok{color:blue; display: none;}
+.pw_notOk{color:red; display: none;}
+
+.nick_ok{color:blue; display: none;}
+.nick_already{color:red; display: none;}

@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+
+
 @WebServlet("/loginCheckController")
 public class loginCheckController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -26,6 +28,8 @@ public class loginCheckController extends HttpServlet {
 		  Connection conn = null;
 	      PreparedStatement psmt = null;
 	      ResultSet rs = null;
+	      
+	      System.out.println(id);
 	      
     
 	      boolean check = true;
@@ -60,7 +64,7 @@ public class loginCheckController extends HttpServlet {
          if(rs.next()) {
         	 check = true;
          }else{
-        	 check =false;
+        	 check = false;
          }
       }catch(Exception e){
          e.printStackTrace();

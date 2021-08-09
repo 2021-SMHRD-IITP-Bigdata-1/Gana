@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+  
+    <h1><a href="#">Front-end Developer</a></h1>
+    <br><br>
+    <button id="btn">DESIGN</button><button>DEFAULT</button>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+
+    <h1>Javascript</h1>
+    <p>Javascript는 웹 페이지를 동적인 페이지로 만들기 위해 고안된 언어입니다. <br> 차근차근 Javascript에 대해서 배워보도록 합시다.</p>
+    
+    <script>
+        //실제 자바 스크립트 문법을 작성하는 공간
+        //1. 내가 보고 있는 문서(HTML)에서 id값이 btn인 버튼을 가지고 와라.
+        //2. 클릭했을 때 이벤트를 붙여주기
+        //3. 배경색과 글자색좀 바꿔줘!
+        document.querySelector("#btn").addEventListener("click",function(){
+            // 기능 정의
+             document.querySelector("body").style.backgroundColor="yellow"
+             document.querySelector("body").style.color ="blue"
+             
+        })
+        //click -> 기능불러오기 function
+    </script>
+    
+<!-- Javascript 입력과 출력
+    documet.write(); - HTML 문서 내에 출력
+    console.log(); - console창에 출력
+    alert(); - 팝업창으로 출력
+
+
+-->
+    
+</body>
+</html>

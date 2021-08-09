@@ -70,12 +70,13 @@
                                             
                                             
                                             <!-- login form 시작 -->
-                                            <form action="loginController" class="form-subscribe" id="contactForm" method="post">
+                                            <form action="loginController" class="form-subscribe" id="contactForm" method="post" onkeydown="if(event.keyCode==13) return false;">
+                                            
                                                 <!-- id input-->
                                                     <div class="row mb-4">
                                                         <div class="col">
                                                         	
-                                                            <input class="form-control form-control-lg" id="input_id" type="text" placeholder="아이디" name="id" onkeydown="" />
+                                                            <input class="form-control form-control-lg" id="input_id" type="text" placeholder="아이디" name="id" />
                                                        </div>
                                                         
                                                     </div>
@@ -89,7 +90,7 @@
                                                     </div>
                                                    
                                                 </div>
-                                                <div class="text-center col-auto col mb-4"><input class="btn btn-primary btn-lg " id="submitButton" type="submit" value="로그인"></div>
+                                                <div class="text-center col-auto col mb-4"><button class="btn btn-primary btn-lg " id="submitButton" type="submit">로그인</button></div>
                                                 <div class="text-center"><a class="a-notdeco" href="#">회원가입</a></div>
                                                 
                                             </form>
@@ -108,12 +109,6 @@
                         
         </header>
         
-        
-   
-        
-        </body>
-     </html>
-        
          <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -125,3 +120,8 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         
+        
+   
+        
+        </body>
+     </html>

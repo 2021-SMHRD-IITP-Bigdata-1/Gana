@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="UTF-8">
     
@@ -17,8 +18,16 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+	
+
+
         
-          
+   
       
        
             
@@ -76,7 +85,7 @@
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm"></form>
                                 
-                                <div class="row">
+                                <div class="row mb-3">
                                     <div class="col me-2">
                                         <input class="form-control form-control-lg " id="emailAddress" type="text" placeholder="자격증을 검색하세요">
                                         <!--  <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
@@ -84,21 +93,42 @@
                                     </div>
                                     <div class="col-auto "><button class="btn btn-primary btn-lg" id="submitButton" type="submit">검색</button></div>
                                 </div>
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        <p>To activate this form, sign up at</p>
-                                        <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+
+
+                                <!--  -->
+                               
+                                       
+                                    
+                                    <div class="row">
+                                        <div class="col me-2" >
+                                            <select class="js-select2 form-control" multiple="multiple">
+                                                <option value="O1" data-badge="">Option1</option>
+                                                <option value="O2" data-badge="">Option2</option>
+                                                <option value="O3" data-badge="">Option3</option>
+                                                <option value="O4" data-badge="">Option4</option>
+                                                <option value="O5" data-badge="">Option5</option>
+                                                <option value="O6" data-badge="">Option6</option>
+                                                <option value="O7" data-badge="">Option7</option>
+                                                <option value="O8" data-badge="">Option8</option>
+                                                <option value="O9" data-badge="">Option9</option>
+                                                <option value="O10" data-badge="">Option10</option>
+                                                <option value="O11" data-badge="">Option11</option>
+                                                <option value="O12" data-badge="">Option12</option>
+                                                <option value="O13" data-badge="">Option13</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
+                 
+
+
+
+
+
+
+
+
+
+                                
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             </form>
                         </div>
@@ -106,89 +136,91 @@
                 </div>
             </div>
         </header>
+
+      
+
+      
+        
+        <!-- 회원데이터 활용 DB -->
         <!-- Icons Grid-->
-        <section class="features-icons bg-light text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                            <h3>Fully Responsive</h3>
-                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                            <h3>Bootstrap 5 Ready</h3>
-                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                            <h3>Easy to Use</h3>
-                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Image Showcases-->
-        <section class="showcase">
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Fully Responsive Design</h2>
-                        <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-                    </div>
-                </div>
-                <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
-                    <div class="col-lg-6 my-auto showcase-text">
-                        <h2>Updated For Bootstrap 5</h2>
-                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
-                    </div>
-                </div>
-                <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Easy to Use & Customize</h2>
-                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonials-->
-        <section class="testimonials text-center bg-light">
-            <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                            <h5>Margaret E.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
-                            <h5>Sarah W.</h5>
-                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section class="features-icons bg-light text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+
+						<h4>선택 해주세요</h4>
+
+						<div class="col-lg-section1 float-start">
+							<button type="button" class="btn-s1 mb-2 mb-md-0 btn-primary">Default</button>
+						</div>
+						<div class="col-lg-section1 float-start">
+							<button type="button" class="btn-s1 mb-2 mb-md-0 btn-secondary">Default</button>
+						</div>
+                        
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+
+						<h4>가장많이 취득한 자격증</h4>
+
+
+						<div class="chart-pie pt-4 pb-2">
+							<canvas id="myPieChart"></canvas>
+						</div>
+						<div class="mt-4 text-center small">
+
+							<span>
+								<div class="circle"></div>
+								<strong style="font-size: 25px; color: aqua;">●</strong> 정보처리기사
+							</span> <span> <i class="fas fa-circle text-success"></i><strong
+								style="font-size: 25px; color: indianred;">●</strong> 전기기사
+							</span> <span> <i class="fas fa-circle text-info"></i><strong
+								style="font-size: 25px; color: darkblue;">●</strong> 컴활1급
+							</span>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="features-icons-item mx-auto mb-0 mb-lg-3">
+						<h4>요즘 관심있는 자격증은??</h4>
+
+						<div class="chart-pie pt-4 pb-2">
+							<canvas id="myPieChart2"></canvas>
+						</div>
+						<div class="mt-4 text-center small">
+
+							<span >
+								<div class="circle"></div>
+								<strong style="font-size: 25px; color: aqua;">●</strong> 정보처리기사
+							</span> <span > <i class="fas fa-circle text-success"></i><strong
+								style="font-size: 25px; color: indianred;">●</strong> 전기기사
+							</span> <span > <i class="fas fa-circle text-info"></i><strong
+								style="font-size: 25px; color: darkblue;">●</strong> 컴활1급
+							</span>
+
+
+
+
+						</div>
+
+
+
+
+					</div>
+				</div>
+	</section>
+	
+    
+	
+	
+	
+	
+	
+	
         <!-- Call to Action-->
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
@@ -267,14 +299,33 @@
             </div>
         </footer>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<!-- * *                               SB Forms JS                               * *-->
+	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	<script src="chart_js/Chart.min.js"></script>
+    <script src="chart_js/chart-pie-demo.js"></script>
+    <script src="chart_js/chart-pie-demo2.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+  <script src="js/main.js"></script>
+
+    
+
+    
+ 
+
+</body>
 </html>
+
+    
     
