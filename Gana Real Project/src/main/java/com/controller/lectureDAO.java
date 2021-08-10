@@ -26,7 +26,7 @@ public class lectureDAO {
 
 			String sql = "SELECT LEC_INFO, LEC_TEACH, LEC_FREE, LEC_LINK, LEC_TEST, LEC_COST, LEC_NUM, LEC_BF, LEC_DATE, LEC_SUB, LEC_NAME, LEC_SITE FROM LECTURE WHERE CERT_ID = ( SELECT CERT_ID FROM CERTIFICATION WHERE CERT_NAME =?)";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, "정보처리기사");
+			psmt.setString(1, CERT_NAME);
 
 			rs = psmt.executeQuery();
 

@@ -241,6 +241,19 @@ function checkNick(){
 
  }
  
+   function disscert5(){
+ 
+ 			
+ 			$('.blind4').css("display","none");
+ 			$('.minButton4').css("display","none");
+ 			
+ 			
+ 			
+ 			 
+
+ }
+ 
+ 
  
  
  
@@ -284,6 +297,11 @@ function checkNick(){
 {
 	e.preventDefault();   
 });
+ $('button.minButton4').click(function(e)
+{
+	e.preventDefault();   
+});
+
 
  
 
