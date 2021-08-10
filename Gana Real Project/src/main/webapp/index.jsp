@@ -214,6 +214,109 @@
 				</div>
 	</section>
 	
+	<!-- 크롤링을 이용한 데이터 -->
+	<section class="features-icons bg-light text-center">
+	
+	<form action="crawling" method="post">
+
+      <section class="features-icons bg-light text-center">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                     <br>
+                     <h4>시험 종목을 선택해주세요</h4>
+
+                     <select class="lead mb-0" id="browsers2" name="test" required
+                        autofocus>
+                        
+                        <option value="정보처리기사" >정보처리기사</option>
+                        <option value="정보보안기사">정보보안기사</option>
+                        <option value="방송통신기사" >방송통신기사</option>
+                        <option value="무선설비기사" >무선설비기사</option>
+                        <option value="전파전자통신기사"  >전파전자통신기사</option>
+                        <option value="전기기사" >전기기사</option>
+                        <option value="전기공사기자">전기공사기자</option>
+                        <option value="전기철도기사" >전기철도기사</option>
+                        <option value="철도신호기사" >철도신호기사</option>
+                        <option value="광학기사">광학기사</option>
+                        <option value="반도체설계기사">반도체설계기사</option>
+                        <option value="임베디드기사">임베디드기사</option>
+                     </select> <br>
+                     <br>
+                     <h4>연도를 선택해주세요</h4>
+
+                     <select class="lead mb-0" id="browsers2" name="s_year" required
+                        autofocus>
+                        <option value="2020" >2020</option>
+                        <option value="2019" >2019</option>
+                        <option value="2018" >2018</option>
+                        <option value="2017" >2017</option>
+                        <option value="2016" >2016</option>
+                        <option value="2015" >2015</option>
+
+                     </select> <br>
+                     <br> <input type="submit" class="submitsytle" value="검색">
+
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                     <div class="features-icons-icon d-flex">
+                        <i class="bi-people-fill m-auto text-primary"></i>
+                     </div>
+                     <h3>필기 합격률</h3>
+                     <p class="lead mb-0">
+                        <b style="font-size: 40px;">
+                        
+                        
+                        <% 
+                        String test = (String) request.getAttribute("send");
+                        String people = (String) request.getAttribute("send3");
+                        String people2 = (String) request.getAttribute("send4");
+                        
+                        %>
+                        <%=test %>
+                         
+                        
+                        </b> <br>전체 응시자수는 <%=people %>명이며 <%=people2 %>이 합격
+                        하였습니다
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                     <div class="features-icons-icon d-flex">
+                        <i class="bi-person-check-fill m-auto text-primary"></i>
+                     </div>
+                     <h3>실기 합격률</h3>
+                     <p class="lead mb-0">
+                         <b style="font-size: 40px;">
+                         
+                         <% 
+                          String test2 = (String) request.getAttribute("send2");
+                        String people3 = (String) request.getAttribute("send5");
+                        String people4 = (String) request.getAttribute("send6");
+                         %>
+                        <%=test2 %>
+                         
+                         
+                         </b> <br>전체 응시자수는 <%=people3 %>명이며 <%=people4 %> 이 합격 하였습니다
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+   </form>
+	
+	
+	
+	
+	</section>
+	
     
 	
 	

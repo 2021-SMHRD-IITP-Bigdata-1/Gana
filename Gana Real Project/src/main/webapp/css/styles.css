@@ -7212,6 +7212,10 @@ textarea.form-control-lg {
   margin-left: 3rem !important;
 }
 
+.ms-6 {
+  margin-left: 9.6rem !important;
+}
+
 .ms-auto {
   margin-left: auto !important;
 }
@@ -11130,3 +11134,121 @@ footer.footer {
 
 .nick_ok{color:blue; display: none;}
 .nick_already{color:red; display: none;}
+
+
+/*20210810*/
+#browsers2{
+  background-color: white;
+  border: 1px solid purple;
+  border-radius: 10px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+margin: 0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-appearance: none;
+-moz-appearance: none;
+
+
+background-image:
+linear-gradient(45deg, transparent 50%, gray 50%),
+linear-gradient(135deg, gray 50%, transparent 50%),
+radial-gradient(#ddd 70%, transparent 72%);
+background-position:
+calc(100% - 20px) calc(1em + 2px),
+calc(100% - 15px) calc(1em + 2px),
+calc(100% - .5em) .5em;
+background-size:
+5px 5px,
+5px 5px,
+1.5em 1.5em;
+background-repeat: no-repeat;
+}
+
+
+.submitsytle{
+  width: 50%; background-color: #0d6efd; color: rgb(255, 255, 199); padding: 14px 10px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer; 
+  font-size: 19px;
+
+}
+
+
+.btn-lg, .btn-group-lg > .btn-plus {
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+.form-control-little2 {
+  display: block;
+  width: 45%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.blind1 {
+	display:none;
+}
+
+.blind2 {
+	display:none;
+}
+
+.blind3 {
+	display:none;
+}
+
+.blind4 {
+	display:none;
+}
+.blind {
+	display:none;
+}
+
+#addButton0{
+	display:inline-block;
+}
+
+.minButton0{
+	display:none;
+}
+
+#addButton1{
+	display:inline-block;
+}
+
+.minButton1{
+	display:none;
+}
+
+#addButton2{
+	display:inline-block;
+}
+
+.minButton2{
+	display:none;
+}
+
+#addButton3{
+	display:inline-block;
+}
+
+.minButton3{
+	display:none;
+}
+
+

@@ -10,11 +10,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +36,7 @@ public class crawling extends HttpServlet {
 
       request.setCharacterEncoding("utf-8");
 
-      String data = request.getParameter("data");
+      String test = request.getParameter("test");
       String s_year = request.getParameter("s_year");
       String code = "";
 
@@ -54,7 +57,7 @@ public class crawling extends HttpServlet {
 
          psmt = conn.prepareStatement(sql);
 
-         psmt.setString(1, data);
+         psmt.setString(1, test);
 
          rs = psmt.executeQuery();
 
@@ -118,14 +121,45 @@ public class crawling extends HttpServlet {
       List<WebElement> year = driver.findElements(By.cssSelector("td:nth-child(2)"));// 연도별 데이터
       List<WebElement> rate1 = driver.findElements(By.cssSelector("td:nth-child(5)")); // 필기 합격률
       List<WebElement> rate2 = driver.findElements(By.cssSelector("td:nth-child(8)")); // 실기 합격률
+      
+      List<WebElement> peoplo = driver.findElements(By.cssSelector("td:nth-child(3)")); // 필기 응시자수
+      List<WebElement> peoplo2 = driver.findElements(By.cssSelector("td:nth-child(4)")); // 필기 합격자수
+      List<WebElement> peoplo3 = driver.findElements(By.cssSelector("td:nth-child(6)")); // 실기 응시자
+      List<WebElement> peoplo4 = driver.findElements(By.cssSelector("td:nth-child(7)")); // 실기 합격자수
 
+      
       for (int i = 1; i < year.size(); i++) {
 
          if (year.get(i).getText().equals(s_year)) {
             System.out.println("필기 합격률 :" + rate1.get(i).getText());
             System.out.println("실기 합격률 :" + rate2.get(i - 1).getText());
-            response.sendRedirect("loginSuccess.jsp?1s=" + rate1.get(i).getText() +"?2s="+rate2.get(i - 1).getText());
-            System.out.println("");
+            
+         
+            
+            String result =rate1.get(i).getText();
+            String result2 =rate2.get(i - 1).getText();
+            
+            String result3 = peoplo.get(i).getText();
+            String result4 = peoplo2.get(i).getText();
+            String result5 = peoplo3.get(i).getText();
+            String result6 = peoplo4.get(i).getText();
+         
+            request.setAttribute("send", result); //필기 합격률 
+            request.setAttribute("send2", result2); // 실기 합격률 
+            request.setAttribute("send3", result3); // 필기 응시자수 
+            request.setAttribute("send4", result4);//  필기 합격자수 
+            request.setAttribute("send5", result5);//실기 응시자수 
+            request.setAttribute("send6", result6); // 실기 합격자수
+            
+            ServletContext context = getServletContext();
+            RequestDispatcher dispatcher = context.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
+
+         
+            //request.setAttribute(s_year,  rate2.get(i - 1).getText());
+            
+            
+            
 
          }
 

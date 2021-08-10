@@ -89,7 +89,7 @@
                                                 </div>
                                                  <div class="row mb-4 ">
                                                     <div class="col ">
-                                                        <input class="form-control form-control-lg" id="input_pw" type="password" name="pw" required oninput = "checkPw()"/>
+                                                        <input class="form-control form-control-lg" id="input_pw" type="password" name="pw" maxlength="15" required oninput = "checkPw()"/>
                                                      
                                                     </div>
                                                    
@@ -101,7 +101,7 @@
                                                 </div>
                                                  <div class="row mb-4 ">
                                                     <div class="col ">
-                                                        <input class="form-control form-control-lg" id="input_pw2" type="password" name="pw2" required oninput = "checkPw()"/>
+                                                        <input class="form-control form-control-lg" id="input_pw2" type="password" name="pw2" maxlength="15" required oninput = "checkPw()" />
                                                         <span class="pw_ok mt-2">비밀번호가 일치합니다.</span>
 														<span class="pw_notOk mt-2 ">비밀번호가 일치하지 않습니다.</span>
                                                      
@@ -265,12 +265,68 @@
                                                  <div>
                                                     
                                                 </div>
-                                                 <div class="row mb-end">
+                                                 <div class="row mb-4">
                                                     <div class="col ms-2">
                                                         <h5 class="joininfo float-start me-4">학과</h5>
-                                                        <input class="form-control-little me-2" id="input_subject" type="text" name="subject">
+                                                        <input class="form-control form-control-little me-2" id="input_subject" type="text" name="subject">
                                                     </div> 
                                                 </div>
+                                                
+                                                <!-- certificate -->
+                                                <div>
+                                                </div>
+                                                 <div class="row mb-1">
+                                                    <div class="col ms-2">
+                                                        <h5 class="joininfo float-start me-4">취득한 자격증</h5>
+                                                        <input class="form-control form-control-little me-2" id="input_cert" type="text" name="subject">
+                                                        <button class="btn btn-primary btn-lg " id="addButton0" style="padding : 0.5rem !important;" onclick="showcert1()">+</button>
+                                                        <button class="btn btn-primary btn-lg minButton0" style="padding : 0.5rem !important;" onclick="disscert1()">-</button>
+                                                    </div> 
+                                                </div>
+                                                
+                                                <div>
+                                                </div>
+                                                 <div class="row mb-1">
+                                                    <div class="blind1 col ms-2">
+                                                        <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
+                                                        <input class="form-control form-control-little me-2" id="input_cert" type="text" name="subject">
+                                                        <button class="btn btn-primary btn-lg " id="addButton1" style="padding : 0.5rem !important;" onclick="showcert2()">+</button>
+                                                        <button class="btn btn-primary btn-lg minButton1" style="padding : 0.5rem !important;" onclick="disscert2()">-</button>
+                                                    </div> 
+                                                </div>
+                                                
+                                                <div>
+                                                </div>
+                                                 <div class="row mb-1">
+                                                    <div class="blind2 col ms-2">
+                                                        <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
+                                                        <input class="form-control form-control-little me-2" id="input_subject" type="text" name="subject">
+                                                        <button class="btn btn-primary btn-lg " id="addButton2" style="padding : 0.5rem !important;" onclick="showcert3()">+</button>
+                                                        <button class="btn btn-primary btn-lg minButton2" style="padding : 0.5rem !important;" onclick="disscert3()">-</button>
+                                                    </div> 
+                                                </div>
+                                                
+                                                <div>
+                                                </div>
+                                                 <div class="row mb-1">
+                                                    <div class="blind3 col ms-2">
+                                                        <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
+                                                        <input class="form-control form-control-little me-2" id="input_subject" type="text" name="subject">
+                                                        <button class="btn btn-primary btn-lg " id="addButton3" style="padding : 0.5rem !important;" onclick="showcert4()">+</button>
+                                                        <button class="btn btn-primary btn-lg minButton3" style="padding : 0.5rem !important;" onclick="disscert4()">-</button>
+                                                    </div> 
+                                                </div>
+                                                <div>
+                                                </div>
+                                                 <div class="row mb-1">
+                                                    <div class="blind4 col ms-2">
+                                                        <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
+                                                        <input class="form-control form-control-little me-2" id="input_subject" type="text" name="subject">
+                                                        
+                                                    </div> 
+                                                </div>
+                                                
+                                                
 
 
 

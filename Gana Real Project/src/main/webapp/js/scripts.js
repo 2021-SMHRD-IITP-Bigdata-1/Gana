@@ -91,20 +91,31 @@ function checkId(){
   
   			
         	var pw = $('#input_pw').val(); 
-        	var pw2 = $('#input_pw2').val(); 
+        	var pw2 = $('#input_pw2').val();
+        	
+        	
 	       
 	        if(pw == pw2){
 	                     $('.pw_ok').css("display","inline-block"); 
 	                     $('.pw_notOk').css("display", "none");
-	                 } else { 
+	                 }else { 
 	                     $('.pw_notOk').css("display","inline-block");
 	                     $('.pw_ok').css("display", "none");
 	                 }
-	               
-	            	
-	            	
+	                           	
 	        
         }
+        
+        
+        
+ function checkSpacebar(){
+ 
+ 	var kcode = event.keyCode;
+ 	if(kcode == 32) event.returnValue = false;
+ 	
+ }
+ 
+ 
 
 
 function checkNick(){
@@ -137,6 +148,142 @@ function checkNick(){
 	    });
 	        
         }
+        
+ function showcert1(){
+ 
+ 			
+ 			$('.blind1').css("display","inline-block");
+ 			$('#addButton0').css("display","none"); 
+ 			$('.minButton0').css("display","inline-block");
+ 			
+ 			 
+
+ 
+ }
+ 
+  function disscert1(){
+ 
+ 			
+ 			$('.blind1').css("display","none");
+ 			$('#addButton0').css("display","inline-block"); 
+ 			$('.minButton0').css("display","none");
+ 			
+ 			 
+
+ }
+ 
+  function showcert2(){
+ 
+ 			
+ 			$('.blind2').css("display","inline-block");
+ 			$('#addButton1').css("display","none"); 
+ 			$('.minButton1').css("display","inline-block");
+ 			
+ 			 
+
+ 
+ }
+ 
+  function disscert2(){
+ 
+ 			
+ 			$('.blind2').css("display","none");
+ 			$('#addButton1').css("display","inline-block"); 
+ 			$('.minButton1').css("display","none");
+ 			
+ 			 
+
+ }
+ 
+   function showcert3(){
+ 
+ 			
+ 			$('.blind3').css("display","inline-block");
+ 			$('#addButton2').css("display","none"); 
+ 			$('.minButton2').css("display","inline-block");
+ 			
+ 			 
+
+ 
+ }
+ 
+  function disscert3(){
+ 
+ 			
+ 			$('.blind3').css("display","none");
+ 			$('#addButton2').css("display","inline-block"); 
+ 			$('.minButton2').css("display","none");
+ 			
+ 			 
+
+ }
+ 
+    function showcert4(){
+ 
+ 			
+ 			$('.blind4').css("display","inline-block");
+ 			$('#addButton3').css("display","none"); 
+ 			$('.minButton3').css("display","inline-block");
+ 			
+ 			 
+
+ 
+ }
+ 
+  function disscert4(){
+ 
+ 			
+ 			$('.blind4').css("display","none");
+ 			$('#addButton3').css("display","inline-block"); 
+ 			$('.minButton3').css("display","none");
+ 			
+ 			 
+
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ $('button#addButton0').click(function(e)
+{
+	e.preventDefault();   
+});
+
+ $('button#addButton1').click(function(e)
+{
+	e.preventDefault();   
+});
+
+ $('button#addButton2').click(function(e)
+{
+	e.preventDefault();   
+});
+
+ $('button#addButton3').click(function(e)
+{
+	e.preventDefault();   
+});
+
+ $('button.minButton0').click(function(e)
+{
+	e.preventDefault();   
+});
+
+ $('button.minButton1').click(function(e)
+{
+	e.preventDefault();   
+});
+
+ $('button.minButton2').click(function(e)
+{
+	e.preventDefault();   
+});
+ $('button.minButton3').click(function(e)
+{
+	e.preventDefault();   
+});
 
  
 
