@@ -303,6 +303,7 @@ function checkNick(){
 
  }
  
+ 
  function disscert8(){
  
  			
@@ -311,6 +312,40 @@ function checkNick(){
  			
  			 
 
+ }
+ 
+ 
+  function showjob(){
+ 
+ 			
+ 			$('.blind1').css("display","inline-block");
+ 			$('.blind2').css("display","none");
+ 			$('.blind3').css("display","none");
+ 			
+ 			
+ 
+ }
+ 
+   function showage(){
+ 
+ 			
+ 			$('.blind1').css("display","none");
+ 			$('.blind2').css("display","inline-block");
+ 			$('.blind3').css("display","none");
+ 			
+ 			
+ 
+ }
+ 
+    function showsex(){
+ 
+ 			
+ 			$('.blind1').css("display","none");
+ 			$('.blind2').css("display","none");
+ 			$('.blind3').css("display","inline-block");
+ 			
+ 			
+ 
  }
  
  

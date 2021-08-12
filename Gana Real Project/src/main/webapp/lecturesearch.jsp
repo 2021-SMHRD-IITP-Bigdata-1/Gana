@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="com.controller.Image"%>
 <%@page import="com.controller.lectureVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.controller.lectureDAO"%>
@@ -19,6 +21,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+	<style>
+	img{
+	width: 223px;
+	height: 180px;
+	object-fit: cover;
+	}
+    </style>
 </head>
 <body>
 <!-- Navigation-->
@@ -66,67 +75,89 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     
                     
-                    
-                    
-                    
                     <%
-                    lectureDAO dao = new lectureDAO();
-                    ArrayList<lectureVO> arr = dao.selectAll();
-                    
-                    for(int i=0; i<arr.size(); i++){ %>
+                     lectureDAO dao = new lectureDAO();
+                     ArrayList<lectureVO> arr = dao.selectAll();
+                     Image itc = new Image();
+                                                                                
+                    for(int i=0; i<arr.size(); i++){
+                                                            %>
                     <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h6 style="color:gray"><% out.print(arr.get(i).getSite());%></h6>
-                                    <h5 class="fw-bolder"><% out.print(arr.get(i).getName());%></h5>
-                                    <!-- Free badge-->
-                            		<div class="badge bg-danger text-white position-absolute" style="top: 9.5rem; left: 0.5rem">유료</div>
-                            		<!-- TEST badge-->
-                            		<%
+					<div class="card h-100">
+						<!-- Product image-->
+						<img class="card-img-top"
+							src="<%=itc.test2(arr.get(i).getLink()) %>" alt="..." />
+						<!-- Product details-->
+						<div class="card-body p-4">
+							<div class="text-center">
+								<!-- Product name-->
+								<h6 style="color: gray">
+									<% out.print(arr.get(i).getSite());%>
+								</h6>
+								<h5 class="fw-bolder">
+									<% out.print(arr.get(i).getName());%>
+								</h5>
+								<!-- Free badge-->
+								<div class="badge bg-danger text-white position-absolute"
+									style="top: 9.5rem; left: 0.5rem">유료</div>
+								<!-- TEST badge-->
+								<%
                             		if(arr.get(i).getTest()==1){
-                            			%><div class="badge bg-success text-white position-absolute" style="top: 9.5rem; right: 0.5rem">필기</div>
-                            			<%
+                            			%><div
+									class="badge bg-success text-white position-absolute"
+									style="top: 9.5rem; right: 0.5rem">필기</div>
+								<%
                             		}
                             		else if(arr.get(i).getTest()==2){
                             		%>
-                            			<div class="badge bg-warning text-white position-absolute" style="top: 9.5rem; right: 0.5rem">실기</div>
-                            		<%} 
+								<div class="badge bg-warning text-white position-absolute"
+									style="top: 9.5rem; right: 0.5rem">실기</div>
+								<%} 
                             		else if(arr.get(i).getTest()==3){
                             		%>
-                            			<div class="badge bg-success text-white position-absolute" style="top: 9.5rem; right: 0.5rem">필기</div>
-                            			<div class="badge bg-warning text-white position-absolute" style="top: 9.5rem; right: 3.5rem">실기</div>
-                            		<%}%>
-                                    <!-- Product price-->
-                                    <%if(arr.get(i).getCost()==0){%>
-                                    	<div class="badge bg-primary text-white position-absolute" style="top: 9.5rem; left: 0.5rem">무료</div>
-                                    <%} else{ %>
-                                    	<div class="badge bg-danger text-white position-absolute" style="top: 9.5rem; left: 0.5rem">유료</div>
-                                    <%}
+								<div class="badge bg-success text-white position-absolute"
+									style="top: 9.5rem; right: 0.5rem">필기</div>
+								<div class="badge bg-warning text-white position-absolute"
+									style="top: 9.5rem; right: 3.5rem">실기</div>
+								<%}%>
+								<!-- Product price-->
+								<%if(arr.get(i).getCost()==0){%>
+								<div class="badge bg-primary text-white position-absolute"
+									style="top: 9.5rem; left: 0.5rem">무료</div>
+								<%} else{ %>
+								<div class="badge bg-danger text-white position-absolute"
+									style="top: 9.5rem; left: 0.5rem">유료</div>
+								<%}
                                     %>
-                                    <%if(arr.get(i).getCost()==0){%>
-                                		<h5 style="color:gray">무료</h5>
-                                    <% }else{ %>
-                                    <h5><% out.print(arr.get(i).getCost());%>원</h5>
-                                    <% } %> 
-                                </div>
-                            </div>
-                            <!-- Product actions-->
+								<%if(arr.get(i).getCost()==0){%>
+								<h5 style="color: gray">무료</h5>
+								<% }else{ %>
+								<h5>
+									<% out.print(arr.get(i).getCost());%>원
+								</h5>
+								<% } %>
+							</div>
+						</div>
+						<form action="lecturedetail" method="post">
+						
+						
+						
+						<!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-primary mt-auto" href="#">상세정보</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <%} %>
-                    
-                    
-                    
-                    
-                    
+                                <div class="text-center">
+                                <input type="hidden" id="gameToken" name="data" value="<%=arr.get(i).getId()%>">
+                                <button class="btn btn-outline-primary mt-auto" type="submit">상세정보</button></div>
+                                
+
+						
+							</div>
+                         </form>
+					</div>
+					
+				</div>
+                    <%
+                    }
+                    %>
                     
                 </div>
             </div>

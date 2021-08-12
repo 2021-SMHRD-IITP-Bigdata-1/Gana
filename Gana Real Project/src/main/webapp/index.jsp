@@ -18,17 +18,26 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
-	
-
-
         
-   
-      
+        <!-- 검색필터 -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link href="css/select2.min.css" rel="stylesheet" />
+	    
+	    <!-- 자동완성 -->
+	    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+	<style type="text/css">
+	
+	
+		#flextest{
+		
+			display: flex !important;
+			justify-content: center !important; 
+		}
+	
+	</style>
+	
        
             
             
@@ -86,8 +95,12 @@
                 </div>
             </div>
         </nav>
+        
+        
+        
+        
         <!-- Masthead-->
-        <header class="masthead">v
+        <header class="masthead">
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
@@ -109,9 +122,8 @@
                                 
                                 <div class="row mb-3">
                                     <div class="col me-2">
-                                        <input class="form-control form-control-lg " id="emailAddress" type="text" placeholder="자격증을 검색하세요">
-                                        <!--  <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div> -->
+                                        <input class="form-control form-control-lg " id="search" type="text" placeholder="자격증을 검색하세요">
+                                        
                                     </div>
                                     <div class="col-auto "><button class="btn btn-primary btn-lg" id="submitButton" type="submit">검색</button></div>
                                 </div>
@@ -123,20 +135,15 @@
                                     
                                     <div class="row">
                                         <div class="col me-2" >
-                                            <select class="js-select2 form-control" multiple="multiple">
-                                                <option value="O1" data-badge="">Option1</option>
-                                                <option value="O2" data-badge="">Option2</option>
-                                                <option value="O3" data-badge="">Option3</option>
-                                                <option value="O4" data-badge="">Option4</option>
-                                                <option value="O5" data-badge="">Option5</option>
-                                                <option value="O6" data-badge="">Option6</option>
-                                                <option value="O7" data-badge="">Option7</option>
-                                                <option value="O8" data-badge="">Option8</option>
-                                                <option value="O9" data-badge="">Option9</option>
-                                                <option value="O10" data-badge="">Option10</option>
-                                                <option value="O11" data-badge="">Option11</option>
-                                                <option value="O12" data-badge="">Option12</option>
-                                                <option value="O13" data-badge="">Option13</option>
+                                            <select class="js-select2 form-control" style="width:100% !important;" multiple="multiple">
+                                                <option value="O1" data-badge="">💸가격낮은순</option>
+                                                <option value="O2" data-badge="">📖교재제공</option>
+                                                <option value="O3" data-badge="">✍필기</option>
+                                                <option value="O4" data-badge="">🦶실기</option>
+                                                <option value="O5" data-badge="">📌무료강의</option>
+                                                <option value="O6" data-badge="">👩‍🏫유료강의</option>
+                                                
+                                               
                                             </select>
                                         </div>
                                     </div>
@@ -165,19 +172,58 @@
         
         <!-- 회원데이터 활용 DB -->
         <!-- Icons Grid-->
-       <section class="features-icons bg-light text-center">
+       <section class="features-icons-top bg-light text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
 
-						<h4>선택 해주세요</h4>
+						<h4 class="mb-5">선택 해주세요</h4>
 
 						<div class="col-lg-section1 float-start">
-							<button type="button" class="btn-s1 mb-2 mb-md-0 btn-primary">Default</button>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-primary col-lg-10" onclick="showjob()">🙍‍♂️직업</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-primary col-lg-10" onclick="showage()">🖐연령</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-primary col-lg-10" onclick="showsex()">🚻성별</button>
+							</div>
 						</div>
 						<div class="col-lg-section1 float-start">
-							<button type="button" class="btn-s1 mb-2 mb-md-0 btn-secondary">Default</button>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">대학생</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">공무원</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">취준생</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">자영업</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-5 btn-2 col-lg-10 blind1">직장인</button>
+							</div>
+							
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind2">20대</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-5 btn-2 col-lg-10 blind2">30대</button>
+							</div>
+							
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind3">남</button>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<button type="button" class="btn-s1 mb-5 btn-2 col-lg-10 blind3">여</button>
+							</div>
+							
+							
+							
 						</div>
                         
 					</div>
@@ -237,7 +283,7 @@
 	</section>
 	
 	<!-- 크롤링을 이용한 데이터 -->
-	<section class="features-icons bg-light text-center">
+	<section class="features-icons-middle bg-light text-center" style="background-color:blue;">
 	
 	<form action="crawling" method="post">
 	<!-- action="crawling" -->
@@ -438,10 +484,32 @@
     <script src="js/jquery-3.6.0.min.js"></script>
 
     <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
-  <script src="js/main.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	<!-- 검색어 자동완성 js -->
+	<script src="js/data.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$(function () {	//화면 로딩후 시작
+		$("#search").autocomplete({  //오토 컴플릿트 시작
+			source: List,	// source는 data.js파일 내부의 List 배열
+			focus : function(event, ui) { // 방향키로 자동완성단어 선택 가능하게 만들어줌	
+				return false;
+			},
+			minLength: 1,// 최소 글자수
+			delay: 100,	//autocomplete 딜레이 시간(ms)
+			//disabled: true, //자동완성 기능 끄기
+		});
+	});
+	
+	
+	</script>
+	
+	
 
     
 

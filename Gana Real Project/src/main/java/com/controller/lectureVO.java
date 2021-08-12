@@ -1,6 +1,7 @@
 package com.controller;
 
 public class lectureVO {
+	private String id;
 	private String info;
 	private String teach;
 	private int free;
@@ -14,9 +15,10 @@ public class lectureVO {
 	private String name;
 	private String site;
 	
-	public lectureVO(String info, String teach, int free, String link, int test, int cost, String num, int bf,
+	public lectureVO(String id, String info, String teach, int free, String link, int test, int cost, String num, int bf,
 			String date, int sub, String name, String site) {
 		super();
+		this.id=id;
 		this.info = info;
 		this.teach = teach;
 		this.free = free;
@@ -30,7 +32,12 @@ public class lectureVO {
 		this.name = name;
 		this.site = site;
 	}
-	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getInfo() {
 		return info;
 	}
