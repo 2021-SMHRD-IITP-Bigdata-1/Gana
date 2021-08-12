@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -38,6 +39,22 @@ public class joinController extends HttpServlet {
 		String job = request.getParameter("job");
 		String school = request.getParameter("school");
 		String subject = request.getParameter("subject");
+		
+		//취득자격증
+		
+		
+		/*String gcert1 = request.getParameter("getcert1");
+		String gcert2 = request.getParameter("getcert2");
+		String gcert3 = request.getParameter("getcert3");
+		String gcert4 = request.getParameter("getcert4");
+		String gcert5 = request.getParameter("getcert5");
+		
+		//관심자격증
+		String wish1 = request.getParameter("wishcert1");
+		String wish2 = request.getParameter("wishcert2");
+		String wish3 = request.getParameter("wishcert3");*/
+		
+		
 		
 		if(ad1.equals("a")) {
 			ad1 = "서울특별시";
@@ -105,6 +122,20 @@ public class joinController extends HttpServlet {
 	
 		Connection conn = null;
 		PreparedStatement psmt = null;
+		
+		/*PreparedStatement psmt1 = null;
+		PreparedStatement psmt2 = null;
+		PreparedStatement psmt3 = null;
+		PreparedStatement psmt4 = null;
+		PreparedStatement psmt5 = null;
+		
+		PreparedStatement psmt6 = null;
+		PreparedStatement psmt7 = null;
+		PreparedStatement psmt8 = null;*/
+		
+		
+		
+		
 		ResultSet rs = null;
 		
 		
@@ -121,11 +152,17 @@ public class joinController extends HttpServlet {
 			//Connection 객체 생성
 			conn = DriverManager.getConnection(url, dbid, dbpw);
 			
-			//sql문 작성
+			//member sql문 작성
 			String sql = "insert into MEMBER values(?,?,?,?,?,?,?,?,?,?)";
 			
 			
+			
+			
+			
+			
 			psmt = conn.prepareStatement(sql);
+			
+		
 			
 			psmt.setString(1, id);
 			psmt.setString(2, pw);

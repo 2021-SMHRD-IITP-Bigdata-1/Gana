@@ -11215,9 +11215,15 @@ background-repeat: no-repeat;
 .blind4 {
 	display:none;
 }
-.blind {
+
+.blind5 {
 	display:none;
 }
+
+.blind6 {
+	display:none;
+}
+
 
 #addButton0{
 	display:inline-block;
@@ -11255,6 +11261,22 @@ background-repeat: no-repeat;
 	display:none;
 }
 
+#addButton5{
+	display:inline-block;
+}
 
+.minButton5{
+	display:none;
+}
+#addButton6{
+	display:inline-block;
+}
+
+.minButton6{
+	display:none;
+}
+.minButton7{
+	display:none;
+}
 
 

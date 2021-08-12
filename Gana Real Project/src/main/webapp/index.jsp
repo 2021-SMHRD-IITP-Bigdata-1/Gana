@@ -34,6 +34,8 @@
             
     </head>
     <body>
+    	  <% String get_id = (String)session.getAttribute("getid"); 
+    	     String get_nick = (String)session.getAttribute("getnick");%>
           <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
@@ -48,6 +50,8 @@
                         <li class="nav-item"><a class="nav-link me-lg-3 mb-0" href="#download">커뮤니티</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3 mb-0" href="#download">서비스 소개</a></li>
                     </ul>
+                    
+                    <%if(get_id==null) {%>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                          
                         <span class="d-flex align-items-center" onClick="location.href='login.jsp'">
@@ -55,17 +59,35 @@
                             <span class="small">로그인</span>
                         </span>
                     </button>
+                    
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span class="d-flex align-items-center" onClick="location.href='join.jsp'">
                             <i class="bi bi-door-open me-2"></i>
                             <span class="small">회원가입</span>
                         </span>
                     </button>
+                    <%}else {%>
+                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                         
+                        <span class="d-flex align-items-center"">
+                            <i class="bi bi-person-circle me-2"></i>
+                            <span class="small"><%=get_nick %>님 환영합니다!</span>
+                        </span>
+                    </button>
+                    
+                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                        <span class="d-flex align-items-center" onClick="location.href='logoutController'">
+                            <i class="bi bi-box-arrow-right me-2"></i>
+                            <span class="small">로그아웃</span>
+                        </span>
+                    </button>
+                    <% }%>
+                    
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead">v
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
@@ -218,6 +240,7 @@
 	<section class="features-icons bg-light text-center">
 	
 	<form action="crawling" method="post">
+	<!-- action="crawling" -->
 
       <section class="features-icons bg-light text-center">
          <div class="container">
@@ -227,8 +250,7 @@
                      <br>
                      <h4>시험 종목을 선택해주세요</h4>
 
-                     <select class="lead mb-0" id="browsers2" name="test" required
-                        autofocus>
+                     <select class="lead mb-0" id="browsers2" name="test" >
                         
                         <option value="정보처리기사" >정보처리기사</option>
                         <option value="정보보안기사">정보보안기사</option>
@@ -246,8 +268,7 @@
                      <br>
                      <h4>연도를 선택해주세요</h4>
 
-                     <select class="lead mb-0" id="browsers2" name="s_year" required
-                        autofocus>
+                     <select class="lead mb-0" id="browsers2" name="s_year" >
                         <option value="2020" >2020</option>
                         <option value="2019" >2019</option>
                         <option value="2018" >2018</option>
@@ -256,7 +277,7 @@
                         <option value="2015" >2015</option>
 
                      </select> <br>
-                     <br> <input type="submit" class="submitsytle" value="검색">
+                     <br> <input type="submit" class="submitsytle" value="검색" >
 
                   </div>
                </div>

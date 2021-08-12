@@ -323,44 +323,49 @@
                                                         <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
                                                         <input class="form-control form-control-little me-2" id="getcert5" type="text" name="subject">
                                                         <button class="btn btn-primary btn-lg minButton4" style="padding : 0.5rem !important;" onclick="disscert5()">-</button>
-                                                        <span class="mt-2 " style="color:red;">최대 5개만 적을 수 있습니다.</span>
+                                                        
                                                         
                                                     </div> 
                                                 </div>
+                                                <span class="blind4 font mb-4" style="color:red; margin-left:155px">최대 5개까지 적을 수 있습니다.</span>
+                                                
+                                                
+                                                
+                                                
                                                 
                                                  <!-- wish certificate -->
                                                 <div>
                                                 </div>
                                                  <div class="row mb-1">
                                                     <div class="col ms-2">
-                                                        <h5 class="joininfo float-start me-4">취득한 자격증</h5>
+                                                        <h5 class="joininfo float-start me-4">관심 자격증</h5>
                                                         <input class="form-control form-control-little me-2" id="wishcert1" type="text" name="subject">
-                                                        <button class="btn btn-primary btn-lg " id="addButton0" style="padding : 0.5rem !important;" onclick="showcert1()">+</button>
-                                                        <button class="btn btn-primary btn-lg minButton0" style="padding : 0.5rem !important;" onclick="disscert1()">-</button>
+                                                        <button class="btn btn-primary btn-lg " id="addButton4" style="padding : 0.5rem !important;" onclick="showcert6()">+</button>
+                                                        <button class="btn btn-primary btn-lg minButton5" style="padding : 0.5rem !important;" onclick="disscert6()">-</button>
                                                     </div> 
                                                 </div>
                                                 
                                                 <div>
                                                 </div>
                                                  <div class="row mb-1">
-                                                    <div class="blind1 col ms-2">
+                                                    <div class="blind5 col ms-2">
                                                         <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
-                                                        <input class="form-control form-control-little me-2" id="getcert3" type="text" name="subject">
-                                                        <button class="btn btn-primary btn-lg " id="addButton1" style="padding : 0.5rem !important;" onclick="showcert2()">+</button>
-                                                        <button class="btn btn-primary btn-lg minButton1" style="padding : 0.5rem !important;" onclick="disscert2()">-</button>
+                                                        <input class="form-control form-control-little me-2" id="wishcert2" type="text" name="subject">
+                                                        <button class="btn btn-primary btn-lg " id="addButton5" style="padding : 0.5rem !important;" onclick="showcert7()">+</button>
+                                                        <button class="btn btn-primary btn-lg minButton6" style="padding : 0.5rem !important;" onclick="disscert7()">-</button>
                                                     </div> 
                                                 </div>
                                                 
                                                 <div>
                                                 </div>
                                                  <div class="row mb-1">
-                                                    <div class="blind2 col ms-2">
+                                                    <div class="blind6 col ms-2">
                                                         <h5 class="joininfo float-start me-4">　　　　　　&nbsp;</h5>
-                                                        <input class="form-control form-control-little me-2" id="getcert4" type="text" name="subject">
-                                                        <button class="btn btn-primary btn-lg " id="addButton2" style="padding : 0.5rem !important;" onclick="showcert3()">+</button>
-                                                        <button class="btn btn-primary btn-lg minButton2" style="padding : 0.5rem !important;" onclick="disscert3()">-</button>
+                                                        <input class="form-control form-control-little me-2" id="wishcert3" type="text" name="subject">
+                                                        <button class="btn btn-primary btn-lg minButton7" style="padding : 0.5rem !important;" onclick="disscert8()">-</button>
                                                     </div> 
                                                 </div>
+                                                <span class="blind6 font mb-4" style="color:red; margin-left:155px">최대 3개까지 적을 수 있습니다.</span>
                                                 
                                                 
 

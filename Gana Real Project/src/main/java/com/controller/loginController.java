@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 @WebServlet("/loginController")
@@ -24,6 +25,7 @@ public class loginController extends HttpServlet {
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("password");
+		
 		Connection conn = null;
 		PreparedStatement psmt = null;
 		ResultSet rs = null;
@@ -58,9 +60,18 @@ public class loginController extends HttpServlet {
 			
 			//아이디가 겹치지 않을 경우
 			if(rs.next()){
-				String get_name = rs.getString(1);
+				String getid = rs.getString(1);
+				String getnick = rs.getString(3);
 				
-				response.sendRedirect("loginSuccess.jsp?name="+get_name);
+				
+				
+				HttpSession session = request.getSession();
+				
+				session.setAttribute("getid", getid);
+				session.setAttribute("getnick", getnick);
+				
+				response.sendRedirect("index.jsp");
+				
 			}else{
 				
 				response.sendRedirect("loginfail.jsp");

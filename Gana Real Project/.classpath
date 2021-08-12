@@ -8,9 +8,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/smhrd/Desktop/gson-2.8.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/smhrd/Desktop/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/smhrd/Desktop/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/smhrd/Desktop/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kcju0/OneDrive/바탕 화면/gson-2.8.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kcju0/OneDrive/바탕 화면/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kcju0/OneDrive/바탕 화면/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kcju0/OneDrive/바탕 화면/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
