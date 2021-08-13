@@ -27,16 +27,7 @@
 	    <!-- 자동완성 -->
 	    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	
-	<style type="text/css">
-	
-	
-		#flextest{
-		
-			display: flex !important;
-			justify-content: center !important; 
-		}
-	
-	</style>
+
 	
        
             
@@ -118,7 +109,7 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form class="form-subscribe" id="contactForm"></form>
+                            <form class="form-subscribe" id="searchform"></form>
                                 
                                 <div class="row mb-3">
                                     <div class="col me-2">
@@ -179,7 +170,7 @@
 					<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
 
 						<h4 class="mb-5">선택 해주세요</h4>
-
+						<form action="button.jsp" method="post" >
 						<div class="col-lg-section1 float-start">
 							<div class="col-lg-12 text-center" id = "flextest">
 							<button type="button" class="btn-s1 mb-3 btn-primary col-lg-10" onclick="showjob()">🙍‍♂️직업</button>
@@ -193,38 +184,39 @@
 						</div>
 						<div class="col-lg-section1 float-start">
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">대학생</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='대학생'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">공무원</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='공무원'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">취준생</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='취업준비생'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind1">자영업</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='자영업'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-5 btn-2 col-lg-10 blind1">직장인</button>
-							</div>
-							
-							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind2">20대</button>
-							</div>
-							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-5 btn-2 col-lg-10 blind2">30대</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='직장인'>
 							</div>
 							
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-3 btn-2 col-lg-10 blind3">남</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='20대'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<button type="button" class="btn-s1 mb-5 btn-2 col-lg-10 blind3">여</button>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='30대'>
+							</div>
+							
+							<div class="col-lg-12 text-center" id = "flextest">
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='남'>
+							</div>
+							<div class="col-lg-12 text-center" id = "flextest">
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='여'>
 							</div>
 							
 							
 							
 						</div>
+						</form>
                         
 					</div>
 				</div>
