@@ -109,16 +109,16 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form class="form-subscribe" id="searchform"></form>
+                            <form action="searchController" method="post" >
                                 
                                 <div class="row mb-3">
                                     <div class="col me-2">
-                                        <input class="form-control form-control-lg " id="search" type="text" placeholder="자격증을 검색하세요">
+                                        <input class="form-control form-control-lg " id="search" name="search" type="text" placeholder="자격증을 검색하세요">
                                         
                                     </div>
-                                    <div class="col-auto "><button class="btn btn-primary btn-lg" id="submitButton" type="submit">검색</button></div>
+                                    <div class="col-auto "><input class="btn btn-primary btn-lg"  type="submit" value="검색"></div>
                                 </div>
-
+								
 
                                 <!--  -->
                                
@@ -126,7 +126,7 @@
                                     
                                     <div class="row">
                                         <div class="col me-2" >
-                                            <select class="js-select2 form-control" style="width:100% !important;" multiple="multiple">
+                                            <select class="js-select2 form-control" multiple style="width:100% !important;" multiple="multiple" name="filter">
                                                 <option value="O1" data-badge="">💸가격낮은순</option>
                                                 <option value="O2" data-badge="">📖교재제공</option>
                                                 <option value="O3" data-badge="">✍필기</option>
@@ -149,7 +149,7 @@
 
 
                                 
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                
                             </form>
                         </div>
                     </div>
@@ -200,17 +200,17 @@
 							</div>
 							
 							<div class="col-lg-12 text-center" id = "flextest">
-							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='20대'>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind2" name='test' value='20대'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='30대'>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind2" name='test' value='30대'>
 							</div>
 							
 							<div class="col-lg-12 text-center" id = "flextest">
-							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='남'>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind3" name='test' value='남'>
 							</div>
 							<div class="col-lg-12 text-center" id = "flextest">
-							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind1" name='test' value='여'>
+							<input type="submit" class="btn-s1 mb-3 btn-2 col-lg-10 blind3" name='test' value='여'>
 							</div>
 							
 							

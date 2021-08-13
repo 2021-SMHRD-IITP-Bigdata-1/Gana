@@ -8,13 +8,18 @@ import java.util.ArrayList;
 
 public class lectureDAO {
 
-	public ArrayList<lectureVO> selectAll() {
+	public ArrayList<lectureVO> selectAll(String cert) {
 		// 모든 회원들의 정보를 돌려주는 selectAll
 		ArrayList<lectureVO> arr = new ArrayList<lectureVO>();
 		Connection conn = null;
 		PreparedStatement psmt = null;
 		ResultSet rs = null;
-		String CERT_NAME = "정보처리기사";
+		String CERT_NAME = cert;
+		String sql1 = "";
+		int sql2 = 0;
+		int sql3 = 1;
+		int sql4 = 2;
+		
 
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -24,9 +29,21 @@ public class lectureDAO {
 			String dbpw = "smhrd2";
 			conn = DriverManager.getConnection(url, dbid, dbpw);
 
-			String sql = "SELECT LEC_ID, LEC_INFO, LEC_TEACH, LEC_FREE, LEC_LINK, LEC_TEST, LEC_COST, LEC_NUM, LEC_BF, LEC_DATE, LEC_SUB, LEC_NAME, LEC_SITE FROM LECTURE WHERE CERT_ID = ( SELECT CERT_ID FROM CERTIFICATION WHERE CERT_NAME =?)";
+			String sql = "SELECT LEC_ID, LEC_INFO, LEC_TEACH, LEC_FREE, LEC_LINK, LEC_TEST, LEC_COST, LEC_NUM, LEC_BF, LEC_DATE, LEC_SUB, LEC_NAME, LEC_SITE FROM LECTURE WHERE CERT_ID = ( SELECT CERT_ID FROM CERTIFICATION WHERE CERT_NAME =?) and LEC_FREE in(?,?) and LEC_TEST in(?,?,?) and LEC_BF in(?,?) ORDER BY ?";
+			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, CERT_NAME);
+			psmt.setInt(2, sql2);
+			psmt.setInt(3, sql3);
+			psmt.setInt(4, sql2);
+			psmt.setInt(5, sql3);
+			psmt.setInt(6, sql4);
+			psmt.setInt(7, sql2);
+			psmt.setInt(8, sql3);
+			psmt.setString(9, sql1);
+			
+		
+			
 
 			rs = psmt.executeQuery();
 

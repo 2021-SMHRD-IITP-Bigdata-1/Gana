@@ -31,6 +31,9 @@
 </head>
 <body>
 <!-- Navigation-->
+           <% String get_id = (String)session.getAttribute("getid"); 
+    	     String get_nick = (String)session.getAttribute("getnick");%>
+          <!-- Navigation-->
           <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
             <div class="container px-5">
                 <a class="navbar-brand fw-bold" href="index.jsp">Gana Project</a>
@@ -44,6 +47,8 @@
                         <li class="nav-item"><a class="nav-link me-lg-3 mb-0" href="#download">커뮤니티</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3 mb-0" href="#download">서비스 소개</a></li>
                     </ul>
+                    
+                    <%if(get_id==null) {%>
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                          
                         <span class="d-flex align-items-center" onClick="location.href='login.jsp'">
@@ -51,15 +56,35 @@
                             <span class="small">로그인</span>
                         </span>
                     </button>
+                    
                     <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span class="d-flex align-items-center" onClick="location.href='join.jsp'">
                             <i class="bi bi-door-open me-2"></i>
                             <span class="small">회원가입</span>
                         </span>
                     </button>
+                    <%}else {%>
+                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                         
+                        <span class="d-flex align-items-center"">
+                            <i class="bi bi-person-circle me-2"></i>
+                            <span class="small"><%=get_nick %>님 환영합니다!</span>
+                        </span>
+                    </button>
+                    
+                    <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                        <span class="d-flex align-items-center" onClick="location.href='logoutController'">
+                            <i class="bi bi-box-arrow-right me-2"></i>
+                            <span class="small">로그아웃</span>
+                        </span>
+                    </button>
+                    <% }%>
+                    
                 </div>
             </div>
         </nav>
+        
+        
         <!-- Header-->
         <header class="bg-primary py-5">
             <div class="container px-4 px-lg-5 my-5">
@@ -74,10 +99,11 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     
+                    <% lectureDAO dao = new lectureDAO();
+                    ArrayList<lectureVO> arr = (ArrayList) request.getAttribute("arr"); %>
                     
                     <%
-                     lectureDAO dao = new lectureDAO();
-                     ArrayList<lectureVO> arr = dao.selectAll();
+                     
                      Image itc = new Image();
                                                                                 
                     for(int i=0; i<arr.size(); i++){
